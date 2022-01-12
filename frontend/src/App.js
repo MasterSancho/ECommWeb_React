@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import LoginScreen from './screens/LoginScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 const App = () => {
  return (
@@ -14,6 +15,7 @@ const App = () => {
     <Container>
      <Routes>
       <Route path='/login' element={<LoginScreen />} />
+      <Route path='/profile' element={<ProfileScreen />} />
       <Route path='/product/:id' element={<ProductScreen />} />
       <Route path='/' element={<HomeScreen />} />
      </Routes>
