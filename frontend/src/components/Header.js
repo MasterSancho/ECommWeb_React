@@ -25,13 +25,13 @@ const Header = () => {
      <Navbar.Collapse id='basic-navbar-nav'>
       <SearchBox />
       <Nav className='ms-auto'>
-       <LinkContainer to='/cart'>
+       {/* <LinkContainer to='/cart'>
         <Nav.Link>
          <i className='fas fa-shopping-cart'></i> Cart
         </Nav.Link>
-       </LinkContainer>
+       </LinkContainer> */}
 
-       {userInfo ? (
+       {/* {userInfo ? (
         <NavDropdown title={userInfo.name} id='username'>
          <LinkContainer to='/profile'>
           <NavDropdown.Item>Profile</NavDropdown.Item>
@@ -44,14 +44,24 @@ const Header = () => {
           <i className='fas fa-user'></i> Sign In
          </Nav.Link>
         </LinkContainer>
-       )}
+       )} */}
 
-       {userInfo && userInfo.isAdmin && (
-        <NavDropdown title='Admin' id='adminmenu'>
+       {userInfo && userInfo.isAdmin ? (
+        <NavDropdown title={userInfo.name} id='adminmenu'>
+         <LinkContainer to='/profile'>
+          <NavDropdown.Item>Profile</NavDropdown.Item>
+         </LinkContainer>
          <LinkContainer to='/admin/productlist'>
           <NavDropdown.Item>Products</NavDropdown.Item>
          </LinkContainer>
+         <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
         </NavDropdown>
+       ) : (
+        <LinkContainer to='/login'>
+         <Nav.Link>
+          <i className='fas fa-user'></i> Sign In
+         </Nav.Link>
+        </LinkContainer>
        )}
       </Nav>
      </Navbar.Collapse>
