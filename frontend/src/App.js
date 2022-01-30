@@ -8,6 +8,7 @@ import LoginScreen from './screens/LoginScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ProductListScreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
+import DigitalCardScreen from './screens/DigitalCardScreen';
 
 const App = () => {
  return (
@@ -32,6 +33,7 @@ const App = () => {
       <Route path='/page/:pageNumber' element={<HomeScreen />} />
       <Route path='/search/:keyword' element={<HomeScreen />} />
       <Route path='/' element={<HomeScreen />} />
+      <Route path='/digitalcard' element={<DigitalCardScreen />} />
      </Routes>
     </Container>
    </main>

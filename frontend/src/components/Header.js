@@ -25,11 +25,11 @@ const Header = () => {
      <Navbar.Collapse id='basic-navbar-nav'>
       <SearchBox />
       <Nav className='ms-auto'>
-       {/* <LinkContainer to='/cart'>
+       <LinkContainer to='/digitalcard'>
         <Nav.Link>
          <i className='fas fa-shopping-cart'></i> Cart
         </Nav.Link>
-       </LinkContainer> */}
+       </LinkContainer>
 
        {/* {userInfo ? (
         <NavDropdown title={userInfo.name} id='username'>
