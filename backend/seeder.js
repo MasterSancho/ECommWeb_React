@@ -2,9 +2,11 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import users from './data/users.js';
 import products from './data/products.js';
+import digitalcard from './data/digitalcard.js';
 import User from './models/userModel.js';
 import Product from './models/productModel.js';
 import Order from './models/orderModel.js';
+import DigitalCard from './models/digitalCardModel.js';
 import connectDB from './config/db.js';
 
 dotenv.config();
@@ -16,6 +18,7 @@ const importData = async () => {
   await Order.deleteMany();
   await Product.deleteMany();
   await User.deleteMany();
+  await DigitalCard.deleteMany();
 
   const createdUsers = await User.insertMany(users);
 
@@ -25,7 +28,13 @@ const importData = async () => {
    return { ...product, user: adminUser };
   });
 
+  const sampleDigitalCard = {
+   ...digitalcard,
+   user: adminUser,
+  };
+
   await Product.insertMany(sampleProducts);
+  await DigitalCard.insertMany(sampleDigitalCard);
 
   console.log('Data Imported!');
   process.exit();
@@ -40,6 +49,7 @@ const destroyData = async () => {
   await Order.deleteMany();
   await Product.deleteMany();
   await User.deleteMany();
+  await DigitalCard.deleteMany();
 
   console.log('Data Destroyed!');
   process.exit();

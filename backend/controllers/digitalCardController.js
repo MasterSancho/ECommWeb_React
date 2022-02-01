@@ -5,9 +5,9 @@ import DigitalCard from '../models/digitalCardModel.js';
 // @route   Get /api/products
 // @access  Public
 const getDigitalCard = asyncHandler(async (req, res) => {
- const digital_card = await DigitalCard.find();
+ const digitalcard = await DigitalCard.find(req.params);
 
- res.json({ digital_card });
+ res.json({ digitalcard });
 });
 
 export { getDigitalCard };
