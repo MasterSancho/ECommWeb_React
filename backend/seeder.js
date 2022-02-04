@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import users from './data/users.js';
 import products from './data/products.js';
-import digital_card from './data/digitalcard.js';
+import digital_cards from './data/digital_cards.js';
 import User from './models/userModel.js';
 import Product from './models/productModel.js';
 import DigitalCard from './models/digitalCardModel.js';
@@ -26,10 +26,9 @@ const importData = async () => {
    return { ...product, user: adminUser };
   });
 
-  const sampleDigitalCard = {
-   ...digital_card,
-   user: adminUser,
-  };
+  const sampleDigitalCard = digital_cards.map((digital_card) => {
+   return { ...digital_card, user: adminUser };
+  });
 
   await Product.insertMany(sampleProducts);
   await DigitalCard.insertMany(sampleDigitalCard);

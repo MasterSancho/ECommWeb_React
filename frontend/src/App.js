@@ -33,7 +33,7 @@ const App = () => {
       <Route path='/page/:pageNumber' element={<HomeScreen />} />
       <Route path='/search/:keyword' element={<HomeScreen />} />
       <Route path='/' element={<HomeScreen />} />
-      <Route path='/digitalcard' element={<DigitalCardScreen />} />
+      <Route path='/digitalcard/:id' element={<DigitalCardScreen />} />
      </Routes>
     </Container>
    </main>

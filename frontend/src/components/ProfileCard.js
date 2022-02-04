@@ -1,9 +1,23 @@
-import { Container, Row, Image } from 'react-bootstrap';
+import { useEffect } from 'react';
 
-const ProfileCard = () => {
+import { Card } from 'react-bootstrap';
+
+const ProfileCard = ({ digitalcard }) => {
+ useEffect(() => {
+  console.log(digitalcard);
+ }, []);
+
  return (
-  <div>
-   <Container className='text-center'>
+  <Card className='my-3 p-3 rounded'>
+   <Card.Img src={digitalcard.image} />
+
+   <Card.Body>
+    <Card.Title as='div'>
+     <strong>{digitalcard.name}</strong>
+    </Card.Title>
+   </Card.Body>
+
+   {/* <Container className='text-center'>
     <Row>
      <Image
       src='images/08.09.20_Arieli_Shay_029-min.jpg'
@@ -16,8 +30,8 @@ const ProfileCard = () => {
 
      <p className='text-white'>יועץ הנדל"ן האישי שלך</p>
     </Row>
-   </Container>
-  </div>
+   </Container> */}
+  </Card>
  );
 };
 

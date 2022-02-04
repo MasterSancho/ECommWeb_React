@@ -1,0 +1,43 @@
+const digital_cards = [
+ {
+  showcase: 'images/08.09.20_Arieli_Shay_030_png-min.png',
+  profile_image: 'images/08.09.20_Arieli_Shay_029-min.jpg',
+  name: 'שי אריאלי',
+  slogan: 'יועץ הנדל"ן האישי שלך',
+  about: 'שמי שי אריאלי, בן 41 יליד כפר סבא.',
+  picture_image: [
+   '/images/pictures_galery/08.09.20_Arieli_Shay_001-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_002-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_003-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_004-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_005-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_006-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_007-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_008-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_009-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_010-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_011-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_012-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_013-min.jpeg',
+   '/images/pictures_galery/08.09.20_Arieli_Shay_014-min.jpeg',
+  ],
+  recommend_image: [
+   '/images/recommend_galery/08.09.20_Arieli_Shay_015-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_016-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_017-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_018-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_019-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_020-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_021-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_022-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_023-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_024-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_025-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_026-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_027-min.jpeg',
+   '/images/recommend_galery/08.09.20_Arieli_Shay_028-min.jpeg',
+  ],
+ },
+];
+
+export default digital_cards;

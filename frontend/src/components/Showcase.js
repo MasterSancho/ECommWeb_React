@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Row, Image } from 'react-bootstrap';
 
-const Showcase = () => {
+const Showcase = ({ digitalcard }) => {
+ useEffect(() => {
+  console.log(digitalcard);
+ }, []);
+
  return (
   <>
    <Row className='align-items-center'>
