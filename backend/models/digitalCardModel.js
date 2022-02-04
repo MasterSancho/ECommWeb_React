@@ -11,21 +11,34 @@ const digitalCardSchema = mongoose.Schema(
    type: String,
    required: true,
   },
-
-  profile_card: {
-   image: {
-    type: String,
-    required: true,
-   },
-   name: {
-    type: String,
-    required: true,
-   },
-   slogan: {
-    type: String,
-    required: true,
-   },
+  profile_image: {
+   type: String,
+   required: true,
   },
+  name: {
+   type: String,
+   required: true,
+  },
+  slogan: {
+   type: String,
+   required: true,
+  },
+  about: {
+   type: String,
+   required: true,
+  },
+  picture_image: [
+   {
+    type: String,
+    required: true,
+   },
+  ],
+  recommend_image: [
+   {
+    type: String,
+    required: true,
+   },
+  ],
  },
  {
   timestamps: true,
