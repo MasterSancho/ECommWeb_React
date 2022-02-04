@@ -14,6 +14,7 @@ import {
  userDetailsReducer,
  userUpdateProfileReducer,
 } from './reducers/userReducers';
+import { digitalCardReducer } from './reducers/digitalCardReducers';
 
 const reducer = combineReducers({
  productList: productListReducer,
@@ -25,6 +26,7 @@ const reducer = combineReducers({
  userLogin: userLoginReducer,
  userDetails: userDetailsReducer,
  userUpdateProfile: userUpdateProfileReducer,
+ digitalCard: digitalCardReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
