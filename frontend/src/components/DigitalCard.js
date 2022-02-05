@@ -1,5 +1,6 @@
 import { Row, Image } from 'react-bootstrap';
 import IconsLinks from './IconsLinks';
+import IconsShare from './IconsShare';
 
 const DigitalCard = ({ digitalcard }) => {
  return (
@@ -19,6 +20,7 @@ const DigitalCard = ({ digitalcard }) => {
     <p className='text-white'>{digitalcard.slogan}</p>
 
     <IconsLinks />
+    <IconsShare />
    </Row>
   </>
  );
