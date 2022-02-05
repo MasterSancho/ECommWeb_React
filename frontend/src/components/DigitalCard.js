@@ -1,4 +1,5 @@
 import { Row, Image } from 'react-bootstrap';
+import IconsLinks from './IconsLinks';
 
 const DigitalCard = ({ digitalcard }) => {
  return (
@@ -16,6 +17,8 @@ const DigitalCard = ({ digitalcard }) => {
     <h2 className='text-white mb-3'>{digitalcard.name}</h2>
 
     <p className='text-white'>{digitalcard.slogan}</p>
+
+    <IconsLinks />
    </Row>
   </>
  );
