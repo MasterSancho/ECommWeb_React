@@ -1,6 +1,7 @@
 import { Row, Image } from 'react-bootstrap';
 import IconsLinks from './IconsLinks';
 import IconsShare from './IconsShare';
+import Divider from './Divider';
 
 const DigitalCard = ({ digitalcard }) => {
  return (
@@ -21,6 +22,7 @@ const DigitalCard = ({ digitalcard }) => {
 
     <IconsLinks />
     <IconsShare />
+    <Divider />
    </Row>
   </>
  );
