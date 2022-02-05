@@ -18,14 +18,14 @@ const Header = () => {
   <header>
    <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
     <Container>
-     <LinkContainer to='/'>
+     <LinkContainer to='/products/'>
       <Navbar.Brand>EComm</Navbar.Brand>
      </LinkContainer>
      <Navbar.Toggle aria-controls='basic-navbar-nav' />
      <Navbar.Collapse id='basic-navbar-nav'>
       <SearchBox />
       <Nav className='ms-auto'>
-       <LinkContainer to='/digitalcards/'>
+       <LinkContainer to='/'>
         <Nav.Link>
          <i className='fas fa-shopping-cart'></i> Cart
         </Nav.Link>

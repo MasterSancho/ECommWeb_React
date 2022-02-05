@@ -14,7 +14,7 @@ export const digitalCardReducer = (state = { digitalcards: [] }, action) => {
   case DIGITAL_CARD_SUCCESS:
    return {
     loading: false,
-    digitalcards: action.payload,
+    digitalcards: action.payload.digitalcards,
    };
   case DIGITAL_CARD_FAIL:
    return { loading: false, error: action.payload };

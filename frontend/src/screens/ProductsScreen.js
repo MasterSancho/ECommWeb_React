@@ -9,8 +9,6 @@ import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
 import { listProducts } from '../actions/productActions';
-import { cardDigital } from '../actions/digitalCardActions';
-import DigitalCard from '../components/DigitalCard';
 
 const HomeScreen = () => {
  const params = useParams();
@@ -22,16 +20,8 @@ const HomeScreen = () => {
  const productList = useSelector((state) => state.productList);
  const { loading, error, products, page, pages } = productList;
 
- const digitalCard = useSelector((state) => state.digitalCard);
- const {
-  loading: loadingDigitalCard,
-  error: errorDigitalCard,
-  digitalcards,
- } = digitalCard;
-
  useEffect(() => {
   dispatch(listProducts(keyword, pageNumber));
-  dispatch(cardDigital());
  }, [dispatch, keyword, pageNumber]);
 
  return (
@@ -53,13 +43,6 @@ const HomeScreen = () => {
     <Message variant='danger'>{error}</Message>
    ) : (
     <>
-     <Row>
-      {digitalcards.map((digitalcard) => (
-       <Col key={digitalcard._id} sm={12} md={6} lg={4} xs={3}>
-        <DigitalCard digitalcard={digitalcard} />
-       </Col>
-      ))}
-     </Row>
      <Row>
       {products.map((product) => (
        <Col key={product._id} sm={12} md={6} lg={4} xs={3}>

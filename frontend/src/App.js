@@ -9,6 +9,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import ProductListScreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 import DigitalCardScreen from './screens/DigitalCardScreen';
+import ProductsScreen from './screens/ProductsScreen';
 
 const App = () => {
  return (
@@ -26,14 +27,22 @@ const App = () => {
        element={<ProductListScreen />}
       />
       <Route path='/admin/product/:id/edit' element={<ProductEditScreen />} />
-      <Route
+      {/* <Route
        path='/search/:keyword/page/:pageNumber'
        element={<HomeScreen />}
       />
       <Route path='/page/:pageNumber' element={<HomeScreen />} />
       <Route path='/search/:keyword' element={<HomeScreen />} />
+      <Route path='/' element={<HomeScreen />} /> */}
+
+      <Route
+       path='/products/search/:keyword/page/:pageNumber'
+       element={<ProductsScreen />}
+      />
+      <Route path='/products/page/:pageNumber' element={<ProductsScreen />} />
+      <Route path='/products/search/:keyword' element={<ProductsScreen />} />
+      <Route path='/products/' element={<ProductsScreen />} />
       <Route path='/' element={<HomeScreen />} />
-      <Route path='/digitalcard/:id' element={<DigitalCardScreen />} />
      </Routes>
     </Container>
    </main>
