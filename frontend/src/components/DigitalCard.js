@@ -25,7 +25,7 @@ const DigitalCard = ({ digitalcard }) => {
     <IconsLinks />
     <IconsShare />
     <Divider />
-    {/* <PicturesCarousel /> */}
+    <PicturesCarousel />
     <Divider />
     <About />
     <Divider />

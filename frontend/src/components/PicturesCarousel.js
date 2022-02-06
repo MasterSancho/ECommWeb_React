@@ -1,13 +1,19 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Carousel, Image } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from './Loader';
 import Message from './Message';
+import { listPictures } from '../actions/pictureAction';
 
 const PicturesCarousel = () => {
- const digitalCard = useSelector((state) => state.digitalCard);
- const { loading, error, digitalcards } = digitalCard;
+ const dispatch = useDispatch();
+
+ const pictureList = useSelector((state) => state.pictureList);
+ const { loading, error, pictures } = pictureList;
+
+ useEffect(() => {
+  dispatch(listPictures());
+ }, [dispatch]);
 
  return loading ? (
   <Loader />
@@ -15,9 +21,9 @@ const PicturesCarousel = () => {
   <Message variant='danger'>{error}</Message>
  ) : (
   <Carousel pause='hover' className='bg-dark'>
-   {digitalcards.picture_image.map((digitalcard) => (
-    <Carousel.Item key={digitalcard._id}>
-     <Image src={digitalcard.picture_image} alt='' fluid />
+   {pictures.map((picture) => (
+    <Carousel.Item key={picture._id}>
+     <Image src={picture.image} alt={picture.name} fluid />
     </Carousel.Item>
    ))}
   </Carousel>
