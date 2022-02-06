@@ -3,6 +3,7 @@ import IconsLinks from './IconsLinks';
 import IconsShare from './IconsShare';
 import Divider from './Divider';
 import About from './About';
+import PicturesCarousel from './PicturesCarousel';
 
 const DigitalCard = ({ digitalcard }) => {
  return (
@@ -24,7 +25,10 @@ const DigitalCard = ({ digitalcard }) => {
     <IconsLinks />
     <IconsShare />
     <Divider />
+    {/* <PicturesCarousel /> */}
+    <Divider />
     <About />
+    <Divider />
    </Row>
   </>
  );
