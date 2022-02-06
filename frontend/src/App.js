@@ -8,7 +8,6 @@ import LoginScreen from './screens/LoginScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ProductListScreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
-import DigitalCardScreen from './screens/DigitalCardScreen';
 import ProductsScreen from './screens/ProductsScreen';
 
 const App = () => {

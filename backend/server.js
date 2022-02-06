@@ -9,6 +9,7 @@ import productRoutes from './routes/productRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 import digitalCardRoutes from './routes/digitalCardRoutes.js';
+import pictureRoutes from './routes/pictureRoutes.js';
 
 dotenv.config();
 
@@ -30,6 +31,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/digitalcards', digitalCardRoutes);
+app.use('/api/pictures', pictureRoutes);
 
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));

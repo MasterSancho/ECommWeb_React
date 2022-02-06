@@ -3,9 +3,11 @@ import dotenv from 'dotenv';
 import users from './data/users.js';
 import products from './data/products.js';
 import digital_cards from './data/digital_cards.js';
+import pictures from './data/pictures.js';
 import User from './models/userModel.js';
 import Product from './models/productModel.js';
 import DigitalCard from './models/digitalCardModel.js';
+import Picture from './models/pictureModel.js';
 import connectDB from './config/db.js';
 
 dotenv.config();
@@ -17,6 +19,7 @@ const importData = async () => {
   await Product.deleteMany();
   await User.deleteMany();
   await DigitalCard.deleteMany();
+  await Picture.deleteMany();
 
   const createdUsers = await User.insertMany(users);
 
@@ -30,8 +33,13 @@ const importData = async () => {
    return { ...digital_card, user: adminUser };
   });
 
+  const samplePicture = pictures.map((picture) => {
+   return { ...picture, user: adminUser };
+  });
+
   await Product.insertMany(sampleProducts);
   await DigitalCard.insertMany(sampleDigitalCard);
+  await Picture.insertMany(samplePicture);
 
   console.log('Data Imported!');
   process.exit();
@@ -46,6 +54,7 @@ const destroyData = async () => {
   await Product.deleteMany();
   await User.deleteMany();
   await DigitalCard.deleteMany();
+  await Picture.deleteMany();
 
   console.log('Data Destroyed!');
   process.exit();

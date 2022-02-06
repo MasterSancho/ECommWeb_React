@@ -27,18 +27,6 @@ const digitalCardSchema = mongoose.Schema(
    type: String,
    required: true,
   },
-  picture_image: [
-   {
-    type: String,
-    required: true,
-   },
-  ],
-  recommend_image: [
-   {
-    type: String,
-    required: true,
-   },
-  ],
  },
  {
   timestamps: true,
