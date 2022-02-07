@@ -4,10 +4,12 @@ import users from './data/users.js';
 import products from './data/products.js';
 import digital_cards from './data/digital_cards.js';
 import pictures from './data/pictures.js';
+import recommends from './data/recommends.js';
 import User from './models/userModel.js';
 import Product from './models/productModel.js';
 import DigitalCard from './models/digitalCardModel.js';
 import Picture from './models/pictureModel.js';
+import Recommend from './models/recommendModel.js';
 import connectDB from './config/db.js';
 
 dotenv.config();
@@ -20,6 +22,7 @@ const importData = async () => {
   await User.deleteMany();
   await DigitalCard.deleteMany();
   await Picture.deleteMany();
+  await Recommend.deleteMany();
 
   const createdUsers = await User.insertMany(users);
 
@@ -37,9 +40,14 @@ const importData = async () => {
    return { ...picture, user: adminUser };
   });
 
+  const sampleRecommend = recommends.map((recommend) => {
+   return { ...recommend, user: adminUser };
+  });
+
   await Product.insertMany(sampleProducts);
   await DigitalCard.insertMany(sampleDigitalCard);
   await Picture.insertMany(samplePicture);
+  await Recommend.insertMany(sampleRecommend);
 
   console.log('Data Imported!');
   process.exit();
@@ -55,6 +63,7 @@ const destroyData = async () => {
   await User.deleteMany();
   await DigitalCard.deleteMany();
   await Picture.deleteMany();
+  await Recommend.deleteMany();
 
   console.log('Data Destroyed!');
   process.exit();

@@ -19,6 +19,7 @@ import {
  digitalCardDetailsReducer,
 } from './reducers/digitalCardReducers';
 import { pictureListReducer } from './reducers/pictureReducer';
+import { recommendListReducer } from './reducers/recommendReducer';
 
 const reducer = combineReducers({
  productList: productListReducer,
@@ -33,6 +34,7 @@ const reducer = combineReducers({
  digitalCard: digitalCardReducer,
  digitalCardDetails: digitalCardDetailsReducer,
  pictureList: pictureListReducer,
+ recommendList: recommendListReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem('userInfo')

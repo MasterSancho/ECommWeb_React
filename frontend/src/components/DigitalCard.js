@@ -4,6 +4,7 @@ import IconsShare from './IconsShare';
 import Divider from './Divider';
 import About from './About';
 import PicturesCarousel from './PicturesCarousel';
+import RecommendsCarousel from './RecommendsCarousel';
 
 const DigitalCard = ({ digitalcard }) => {
  return (
@@ -28,6 +29,8 @@ const DigitalCard = ({ digitalcard }) => {
     <PicturesCarousel />
     <Divider />
     <About />
+    <Divider />
+    <RecommendsCarousel />
     <Divider />
    </Row>
   </>
