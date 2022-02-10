@@ -1,4 +1,4 @@
-const gallery = [
+const gallerys = [
  {
   image: '/images/pictures_galery/08.09.20_Arieli_Shay_001-min.jpeg',
   name: 'תמונה',
@@ -57,4 +57,4 @@ const gallery = [
  },
 ];
 
-export default gallery;
+export default gallerys;
