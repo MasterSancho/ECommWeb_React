@@ -11,6 +11,7 @@ import uploadRoutes from './routes/uploadRoutes.js';
 import digitalCardRoutes from './routes/digitalCardRoutes.js';
 import pictureRoutes from './routes/pictureRoutes.js';
 import recommendRoutes from './routes/recommendRoutes.js';
+import galleryRoutes from './routes/galleryRoutes.js';
 
 dotenv.config();
 
@@ -34,6 +35,7 @@ app.use('/api/upload', uploadRoutes);
 app.use('/api/digitalcards', digitalCardRoutes);
 app.use('/api/pictures', pictureRoutes);
 app.use('/api/recommends', recommendRoutes);
+app.use('/api/gallery', galleryRoutes);
 
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
