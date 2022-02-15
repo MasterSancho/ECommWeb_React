@@ -7,6 +7,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Meta from '../components/Meta';
 import { listProductDetails } from '../actions/productActions';
+import { listPictures } from '../actions/pictureAction';
 
 const ProductScreen = () => {
  const params = useParams();
@@ -15,8 +16,12 @@ const ProductScreen = () => {
  const productDetails = useSelector((state) => state.productDetails);
  const { loading, error, product } = productDetails;
 
+ const pictureList = useSelector((state) => state.pictureList);
+ const { pictures } = pictureList;
+
  useEffect(() => {
   dispatch(listProductDetails(params.id));
+  dispatch(listPictures());
  }, [dispatch, params]);
 
  return (
@@ -33,9 +38,14 @@ const ProductScreen = () => {
      <Meta title={product.name} />
 
      <Row>
-      <Col md={6}>
+      {pictures.map((picture) => (
+       <Col key={picture._id} md={6}>
+        <Image src={picture.image} alt={picture.name} fluid />
+       </Col>
+      ))}
+      {/* <Col md={6}>
        <Image src={product.image} alt={product.name} fluid />
-      </Col>
+      </Col> */}
       <Col md={3}>
        <ListGroup variant='flush'>
         <ListGroup.Item>
